@@ -13,32 +13,40 @@ ul {
 	list-style: none;
 }
 
-.list-container {
-	height: 1180px;
-	width: 80%;
-	margin: auto;
-	padding-top: 135px;
-	background-color: white;
+main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-.list-container > ul {
-	width: 100%;
+.list-container {
+	width: 1280px;
+	padding-top: 135px;
+	background-color: white;
 }
 
 .list-container > ul > li {
 	position: relative;
 	margin-bottom: 140px;
 	display: flex;
+	flex-wrap: wrap;
+	white-space: nowrap;
+	font-size: 16pt;
 }
 
 .list-item {
-	width: 50%;
-	font-size: 16pt;
+	line-height: 40px;
+	text-transform: uppercase;
+	flex: 14;
 }
 
 .list-content {
-	width: 50%;
-	font-size: 16pt;
+	flex: 15;
+}
+
+.list-content > form > input,
+.list-content > form > button {
+	display: block;
 }
 
 .list-option {
@@ -49,6 +57,11 @@ ul {
 .list-option-title {
 	position: relative;
 	left: 50px;
+	cursor: pointer;
+	-webkit-user-select: none;
+  	-moz-user-select: none;
+  	-ms-user-select: none;
+  	user-select: none;
 }
 
 .list-option-title:before {
@@ -56,6 +69,10 @@ ul {
 	top: 15px;
 	left: -50px;
 	content: url(images/unchecked.png);
+}
+
+.list-option input {
+	cursor: pointer;
 }
 
 .list-option  input[type="checkbox"]:checked + .list-option-title:before {
@@ -67,25 +84,24 @@ ul {
 }
 
 .input-text-field {
-	width: 300px;
+	width: 350px;
 	height: 50px;
 	background-color: lightgray;
 	border: none;
 	font-size: 14pt;
-	padding-left: 30px;
+	padding: 0 30px 0 30px;
 	margin-bottom: 10px;
 }
 
 .long-input-field {
-	width: 400px;
+	width: 450px;
 }
 
 .input-textarea {
-	width: 400px;
+	width: 450px;
 	height: 190px;
 	border: none;
-	padding-top: 10px;
-	padding-left: 30px;
+	padding: 10px 30px 10px 30px;
 	font-size: 14pt;
 	background-color: lightgray;
 	resize: none;
@@ -119,8 +135,8 @@ ul {
 
 .example-button {
 	position: absolute;
-	left: 110px;
-	bottom: 10px;
+	left: 44px;
+	bottom: -20px;
 	font-size: 12pt;
 	color: #CDA173;
 	border: none;
@@ -132,16 +148,88 @@ ul {
 	content: url(images/example-button-arrow.png);
 }
 
-#choose-components {
-	padding-top: 24px;
-}
-
 .underline {
   position: absolute;
-  bottom: 5px;
+  bottom: 2px;
   left: 0;
-  width: 170px;
+  width: 180px;
   height: 15px;
   background-color: #CDA173;
   z-index: -1;
+}
+
+.small-padding-top {
+	padding-top: 14px;
+}
+
+.bold {
+	font-weight: bolder;
+}
+
+@media screen and (max-width: 600px) {
+	.list-item,
+	.list-content,
+	.list-option {
+		justify-content: center;
+		align-items: center;
+		display: flex;
+	}
+
+	.list-item {
+		margin-bottom: 20px;
+	}
+
+	.list-content {
+		flex-direction: column;
+	}
+
+	.list-options {
+		margin-top: 10px;
+	}
+
+	.list-option {
+		left: -20px;
+		margin-bottom: 15px;
+	}
+
+	.list-option-title {
+		display: flex;
+		width: 60%;
+	}
+
+	.list-option-title:before {
+		position: absolute;
+		top: -10px;
+		left: -50px;
+	}
+
+	.example-button {
+		left: 0px;
+		bottom: -20px;
+	}
+
+	.list-container > ul > li {
+		font-size: 12pt;
+		white-space: normal;
+		flex-direction: column;
+		margin-bottom: 20px;
+	}
+
+	.input-text-field {
+		width: 200px;
+		height: 30px;
+		text-align: center;
+	}
+
+	.list-content > form {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.input-textarea {
+		width: 250px;
+		height: 100px;
+	}
 }
