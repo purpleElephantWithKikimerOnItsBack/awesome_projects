@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="portfolio.css">
+	<title>PortFolio</title>
+</head>
+
+<body>
+	<main>
+		<div class="categories">
+			<input type="radio" checked="checked" id="all-projects" name="radio-categories">
+			<label for="all-projects">Все проекты</label>
+			<input type="radio" id="category-1" name="radio-categories">
+			<label for="category-1">Категория 1</label>
+			<input type="radio" id="category-2" name="radio-categories">
+			<label for="category-2">Категория 2</label>
+			<input type="radio" id="category-3" name="radio-categories">
+			<label for="category-3">Категория 3</label>
+		</div>
+		<div class="year-header">
+			<span class="bolder header">2019<div class="underline"></div></span>
+		</div>
+		<div class="projects-container" id="2019">
+			<template id="project-template">
+				<div class="project">
+					<img>
+					<div class="project-title">
+						<span class="bolder uppercase"></span>
+					</div>
+					<div class="project-description"></div>
+				</div>
+			</template>
+		</div>
+		<div class="year-header">
+			<span class="bolder header">2018<div class="underline"></div></span>
+		</div>
+		<div class="projects-container" id="2018">
+		</div>
+		<div class="pagination-container">
+			<input type="radio" name="pagination" id="p1" checked="checked">
+			<label for="p1">1<div class="checkmark"></div></label>
+			<input type="radio" name="pagination" id="p2">
+			<label for="p2">2<div class="checkmark"></div></label>
+			<input type="radio" name="pagination" id="p3">
+			<label for="p3">3<div class="checkmark"></div></label>
+			<input type="radio" name="pagination" id="p4">
+			<label for="p4">4<div class="checkmark"></div></label>
+			<input type="radio" name="pagination" id="p5">
+			<label for="p5">5<div class="checkmark"></div></label>
+			<input type="radio" name="pagination" id="p6">
+			<label for="p6">6<div class="checkmark"></div></label>
+		</div>
+		<div class="interests">
+			<div class="interests-title">
+				<span class="header uppercase" id="interests-title-span">
+					<span class="bolder">вам будет
+						<div class="underline" id="interests-underline"></div>
+					</span><br>интересно
+				</span>
+			</div>
+			<div class="interests-details">
+				<p>Возможно вам будут интересны другие направления и<br>проекты нашей студии:</p>
+				<ul>
+					<li>
+						<div class="interest-option">
+							<div class="mark">I</div>
+							<span class="bolder uppercase">дизайн внутренних пространств</span>
+						</div>
+					</li>
+					<li>
+						<div class="interest-option">
+							<div class="mark">C</div>
+							<span class="bolder uppercase">наши реализованные проекты</span>
+						</div>
+					</li>
+					<li>
+						<div class="interest-option">
+							<div class="mark">BY</div>
+							<span class="bolder uppercase">бренд серийной мебели</span>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</main>
+
+	<script src="scripts/Collection.js"></script>
+	<script src="scripts/Model.js"></script>
+	<script src="scripts/View.js"></script>
+	<script src="scripts/Controller.js"></script>
+</body>
+</html>
