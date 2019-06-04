@@ -125,19 +125,21 @@ ul {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
+	justify-content: center;
 	background-color: #ECECEC;
 	z-index: -1;
 }
 
 .interests-title {
-	position: relative;
 	margin-top: 100px;
-	margin-left: 50px;
+	display: flex;
+	justify-content: center;
 	flex: 1;
 	z-index: 1;
 }
 
 #interests-underline {
+	top: 95px;
 	width: 200px;
 	height: 12px;
 	background-color: #BABABA;
@@ -150,40 +152,44 @@ ul {
 .interests-details {
 	margin-top: 150px;
 	flex: 1;
-}
-
-.interests-details > ul {
-	margin-top: 150px;
-	margin-bottom: 100px;
 	display: flex;
-	justify-content: center;
-	align-items: center;
 	flex-direction: column;
 }
 
-.interest-option {
-	position: relative;
-	width: 320px;
-	height: 50px;
-	border: 2px solid black;
-	font-size: 10pt;
-	margin-bottom: 30px;
+.interests-details > ul {
+	margin-top: 120px;
+	margin-bottom: 100px;
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	flex-direction: column;
 }
 
-.mark {
-	position: absolute;
-	left: -195px;
-	height: 50px;
+.interests-details > ul > li {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	margin-bottom: 30px;
+}
+
+.interest-mark {
 	width: 50px;
-	border: 2px solid #BABABA;
+	height: 50px;
+	margin-right: 50px;
+	font-size: 24pt;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-size: 24pt;
 	color: #BABABA;
+	border: 2px solid #BABABA;
+}
+
+.interest-text {
+	width: 300px;
+	height: 50px;
+	font-size: 10pt;
+	border: 2px solid black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .bolder {
@@ -206,4 +212,60 @@ ul {
   height: 10px;
   background-color: #CDA173;
   z-index: -1;
+}
+
+@media (max-width: 360px) {
+	.interest-mark {
+		margin-top: 10px;
+	}
+}
+
+@media (max-width: 435px) {
+	.interests-details > ul {
+		width: 100%;
+	}
+
+	.interest-mark {
+		margin-right: 0;
+	}
+}
+
+@media (max-width: 450px) {
+	.categories {
+		display: flex;
+		flex-direction: column;
+		margin-left: 20px;
+	}
+
+	.year-header {
+		margin-top: 50px;
+	}
+
+	.projects-container {
+		flex-direction: column;
+	}
+
+	.project > img {
+		width: 100%;
+	}
+
+	.interests-details span:nth-child(1) {
+		text-align: center;
+	}
+
+	.interests-option {
+		display: flex;
+		align-items: flex-end;
+	}
+
+	.interests-details > ul > li {
+		flex-wrap: wrap-reverse;
+		justify-content: center;
+	}
+}
+
+@media (max-width: 710px) {
+	.interests-details {
+		align-items: center;
+	}
 }
