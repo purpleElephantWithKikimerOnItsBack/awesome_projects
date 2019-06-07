@@ -4,18 +4,16 @@ class Controller {
   	this._model = model;
 
   	this._viewAll();
-  	this._setRadioListeners();
+  	this._setRadioListener();
   }
 
-  _setRadioListeners() {
-  	document.querySelectorAll('input[name=radio-categories]')
-  	  .forEach((radio) => {
-  	  	radio.addEventListener('change', event => this._listenRadio(event))
-  	  });
+  _setRadioListener() {
+    $('.categories label').click(event => event.stopPropagation());
+    $('.categories').first().click(event =>this._listenRadio(event));
   }
 
   _listenRadio(event) {
-  	const category = event.target.id;
+    const category = event.target.id;
   	if (category === 'all-projects') {
   	  this._viewAll();
   	} else {
@@ -26,7 +24,7 @@ class Controller {
   _viewAll() {
   	this._view.clear();
 
-  	document.querySelectorAll('.projects-container').forEach((container) => {
+  	document.querySelectorAll('.year-header').forEach((container) => {
   	  this._view.addProjects(container.id, this._model.filter({ 'year': +container.id }));
   	});
   }
@@ -34,7 +32,7 @@ class Controller {
   _viewCategory(category) {
   	this._view.clear();
 
-  	document.querySelectorAll('.projects-container').forEach((container) => {
+  	document.querySelectorAll('.year-header').forEach((container) => {
   	  this._view.addProjects(container.id, this._model.filter({ 'category': category, 'year': +container.id }));
   	});
   }
