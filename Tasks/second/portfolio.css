@@ -1,0 +1,271 @@
+@font-face {
+  font-family: helvetica;
+  src: url(fonts/HelveticaNeueCyr-Light.otf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: helvetica;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+}
+
+ul {
+	list-style: none;
+}
+
+.categories {
+	margin-top: 40px;
+	-webkit-user-select: none;
+  	-moz-user-select: none;
+  	-ms-user-select: none;
+  	user-select: none;
+}
+
+.categories > input[type="radio"] {
+	visibility: hidden;
+}
+
+.categories > input[type="radio"]:checked + label {
+	color: black;
+}
+
+.categories > label {
+	color: #AFAFAF;
+	cursor: pointer;
+}
+
+.year-header {
+	position: relative;
+	margin: 100px 0px 50px 20px;
+}
+
+.projects-container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.project {
+	flex: 1;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 50px;
+}
+
+.project > img {
+	width: 450px;
+}
+
+.project-title {
+	font-size: 18pt;
+	margin-top: 20px;
+	margin-bottom: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.project-description {
+	font-size: 14pt;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.pagination-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 50px;
+	margin-bottom: 100px;
+}
+
+.pagination-container > label {
+	position: relative;
+	margin-right: 10px;
+	cursor: pointer;
+	color: #C2C2C2;
+}
+
+.pagination-container > label > .checkmark {
+	position: absolute;
+	top: -12px;
+	left: -0.5px;
+	width: 10px;
+	height: 10px;
+	border-radius: 10px;
+	background-color: #C2C2C2;
+	transition: 0.3s;
+}
+
+.pagination-container > input[type="radio"] {
+	visibility: hidden;
+}
+
+.pagination-container > input[type="radio"]:checked + label > .checkmark {
+	top: -15px;
+	left: -1.5px;
+	width: 12px;
+	height: 12px;
+	background-color: #CDA174;
+}
+
+.pagination-container > input[type="radio"]:checked + label {
+	color: #CDA174;
+}
+
+.interests {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	background-color: #ECECEC;
+	z-index: -1;
+}
+
+.interests-title {
+	margin-top: 100px;
+	display: flex;
+	justify-content: center;
+	flex: 1;
+	z-index: 1;
+}
+
+#interests-underline {
+	top: 95px;
+	width: 200px;
+	height: 12px;
+	background-color: #BABABA;
+}
+
+#interests-title-span {
+	position: relative;
+}
+
+.interests-details {
+	margin-top: 150px;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+.interests-details > ul {
+	margin-top: 120px;
+	margin-bottom: 100px;
+	display: flex;
+	flex-direction: column;
+}
+
+.interests-details > ul > li {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	margin-bottom: 30px;
+}
+
+.interest-mark {
+	width: 50px;
+	height: 50px;
+	margin-right: 50px;
+	font-size: 24pt;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #BABABA;
+	border: 2px solid #BABABA;
+}
+
+.interest-text {
+	width: 300px;
+	height: 50px;
+	font-size: 10pt;
+	border: 2px solid black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.bolder {
+	font-weight: bolder;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.header {
+	font-size: 36pt;
+}
+
+.underline {
+  position: absolute;
+  bottom: 2px;
+  left: -15px;
+  width: 82px;
+  height: 10px;
+  background-color: #CDA173;
+  z-index: -1;
+}
+
+@media (max-width: 360px) {
+	.interest-mark {
+		margin-top: 10px;
+	}
+}
+
+@media (max-width: 435px) {
+	.interests-details > ul {
+		width: 100%;
+	}
+
+	.interest-mark {
+		margin-right: 0;
+	}
+}
+
+@media (max-width: 450px) {
+	.categories {
+		display: flex;
+		flex-direction: column;
+		margin-left: 20px;
+	}
+
+	.year-header {
+		margin-top: 50px;
+	}
+
+	.projects-container {
+		flex-direction: column;
+	}
+
+	.project > img {
+		width: 100%;
+	}
+
+	.interests-details span:nth-child(1) {
+		text-align: center;
+	}
+
+	.interests-option {
+		display: flex;
+		align-items: flex-end;
+	}
+
+	.interests-details > ul > li {
+		flex-wrap: wrap-reverse;
+		justify-content: center;
+	}
+}
+
+@media (max-width: 710px) {
+	.interests-details {
+		align-items: center;
+	}
+}

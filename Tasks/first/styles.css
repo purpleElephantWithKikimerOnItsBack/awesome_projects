@@ -1,0 +1,235 @@
+@font-face {
+  font-family: helvetica;
+  src: url(fonts/HelveticaNeueCyr-Light.otf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: helvetica;
+}
+
+ul {
+	list-style: none;
+}
+
+main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.list-container {
+	width: 1280px;
+	padding-top: 135px;
+	background-color: white;
+}
+
+.list-container > ul > li {
+	position: relative;
+	margin-bottom: 140px;
+	display: flex;
+	flex-wrap: wrap;
+	white-space: nowrap;
+	font-size: 16pt;
+}
+
+.list-item {
+	line-height: 40px;
+	text-transform: uppercase;
+	flex: 14;
+}
+
+.list-content {
+	flex: 15;
+}
+
+.list-content > form > input,
+.list-content > form > button {
+	display: block;
+}
+
+.list-option {
+	position: relative;
+	padding-bottom: 30px;
+}
+
+.list-option-title {
+	position: relative;
+	left: 50px;
+	cursor: pointer;
+	-webkit-user-select: none;
+  	-moz-user-select: none;
+  	-ms-user-select: none;
+  	user-select: none;
+}
+
+.list-option-title:before {
+	position: relative;
+	top: 15px;
+	left: -50px;
+	content: url(images/unchecked.png);
+}
+
+.list-option input {
+	cursor: pointer;
+}
+
+.list-option  input[type="checkbox"]:checked + .list-option-title:before {
+	content: url(images/checked.png);
+}
+
+.checkmark {
+	visibility: hidden;
+}
+
+.input-text-field {
+	width: 350px;
+	height: 50px;
+	background-color: lightgray;
+	border: none;
+	font-size: 14pt;
+	padding: 0 30px 0 30px;
+	margin-bottom: 10px;
+}
+
+.long-input-field {
+	width: 450px;
+}
+
+.input-textarea {
+	width: 450px;
+	height: 190px;
+	border: none;
+	padding: 10px 30px 10px 30px;
+	font-size: 14pt;
+	background-color: lightgray;
+	resize: none;
+}
+
+.mesurement {
+	margin-left: 20px;
+}
+
+.order-button {
+	width: 190px;
+	height: 40px;
+	margin-top: 40px;
+	margin-left: 10px;
+	background: black;
+	color: white;
+	font-size: 16px;
+	border: none;
+}
+
+.price-field {
+	position: relative;
+	font-size: 36pt;
+	z-index: 1;
+}
+
+.price {
+	padding-left: 10px;
+	font-weight: bolder;
+}
+
+.example-button {
+	position: absolute;
+	left: 44px;
+	bottom: -20px;
+	font-size: 12pt;
+	color: #CDA173;
+	border: none;
+	background-color: white;
+}
+
+.example-button:before {
+	margin-right: 8px;
+	content: url(images/example-button-arrow.png);
+}
+
+.underline {
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  width: 180px;
+  height: 15px;
+  background-color: #CDA173;
+  z-index: -1;
+}
+
+.small-padding-top {
+	padding-top: 14px;
+}
+
+.bold {
+	font-weight: bolder;
+}
+
+@media screen and (max-width: 600px) {
+	.list-item,
+	.list-content,
+	.list-option {
+		justify-content: center;
+		align-items: center;
+		display: flex;
+	}
+
+	.list-item {
+		margin-bottom: 20px;
+	}
+
+	.list-content {
+		flex-direction: column;
+	}
+
+	.list-options {
+		margin-top: 10px;
+	}
+
+	.list-option {
+		left: -20px;
+		margin-bottom: 15px;
+	}
+
+	.list-option-title {
+		display: flex;
+		width: 60%;
+	}
+
+	.list-option-title:before {
+		position: absolute;
+		top: -10px;
+		left: -50px;
+	}
+
+	.example-button {
+		left: 0px;
+		bottom: -20px;
+	}
+
+	.list-container > ul > li {
+		font-size: 12pt;
+		white-space: normal;
+		flex-direction: column;
+		margin-bottom: 20px;
+	}
+
+	.input-text-field {
+		width: 200px;
+		height: 30px;
+		text-align: center;
+	}
+
+	.list-content > form {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.input-textarea {
+		width: 250px;
+		height: 100px;
+	}
+}

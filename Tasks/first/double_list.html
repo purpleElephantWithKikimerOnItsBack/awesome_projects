@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZROBYM architects</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <main>
+    <div class="list-container">
+      <ul>
+        <li>
+          <div class="list-item small-padding-top">
+            <span class="bold">1.</span> выберите тип объекта
+          </div>
+          <div class="list-content">
+            <ul class="list-options">
+              <li class="list-option">
+                <input type="checkbox" class="checkmark" id="house">
+                <label class="list-option-title" for="house">Дом, квартира, апартаменты</label>
+              </li>
+              <li class="list-option">
+                <input type="checkbox" class="checkmark" id="public-space">
+                <label class="list-option-title" for="public-space">Общественное пространство, хорыкд, ритейл, шоурум, салон</label>
+              </li>
+              <li class="list-option">
+                <input type="checkbox" class="checkmark" id="office">
+                <label class="list-option-title" for="office">Офис, администр. помещение</label>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="list-item small-padding-top">
+            <span class="bold">2.</span> выберите состав работы студии
+          </div>
+          <div class="list-content">
+            <ul class="list-options">
+              <li class="list-option">
+                <input type="checkbox" class="checkmark" id="design">
+                <label class="list-option-title" for="design">Дизайн-проект
+                  <button class="example-button">Пример</button>
+                </label>
+              </li>
+              <li class="list-option">
+                <input type="checkbox" class="checkmark" id="materials">
+                <label class="list-option-title" for="materials">Ведомость материалов
+                  <button class="example-button">Пример</button>
+                </label>
+              </li>
+              <li class="list-option">
+                <input type="checkbox" class="checkmark" id="author-supervision">
+                <label class="list-option-title" for="author-supervision">Авторское сопровождение</label>
+              </li>
+              <li class="list-option">
+                <input type="checkbox" class="checkmark" id="consumer-service">
+                <label class="list-option-title" for="consumer-service">Служба заказчика (контроль закупок)</label>
+              </li>
+              <li class="list-option">
+                <input type="checkbox" class="checkmark" id="founder-supervision">
+                <label class="list-option-title" for="founder-supervision">Личное ведение проекта основателями студии</label>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="list-item">
+            <span class="bold">3.</span> укажите площадь объекта
+          </div>
+          <div class="list-content"> 
+            <input type="text" class="input-text-field">
+            <label class="mesurement">M<sup>2</sup></label>
+          </div>
+        </li>
+        <li>
+          <div class="list-item">
+            итоговая стоимость проекта
+          </div>
+          <div class="list-content">
+            <div class="price-field"><span class="price">4200 $, <div class="underline"></div></span>США</div>
+          </div>
+        </li>
+         <li>
+          <div class="list-item">
+            ваши контактные данные
+          </div>
+          <div class="list-content">
+            <form method="POST">
+              <input type="text" class="input-text-field long-input-field" placeholder="ФИО*">
+              <input type="text" class="input-text-field long-input-field" placeholder="телефон">
+              <input type="text" class="input-text-field long-input-field" placeholder="email*">
+              <textarea placeholder="сообщение" class="input-textarea"></textarea>
+              <button class="order-button">Сделать заказ</button>
+            </form>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </main>
+</body>
+
+</html>
